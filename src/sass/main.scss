@@ -1,6 +1,9 @@
 @import "variables";
 @import "mixin";
 
+@include google-font("Alegrey+Sans");
+@include google-font("Titllium+Web");
+
 body {
   font-family: $text-font;
   color: $text-color;
@@ -55,6 +58,11 @@ a {
     width: $content-width;
     margin-left: auto;
     margin-right: auto;
+   @include large-screen
+    {
+        width: auto;
+        max-width: $content-width;
+    }
   #content {
   }
 
