@@ -1,0 +1,28 @@
+@mixin warning{
+    background:orange;
+    color: #fff;
+}
+
+@mixin large-text{
+    font: {
+        size: 22px;
+        weight: bold;
+    }
+}
+
+@mixin rounded($radius: 6px){
+    border: {
+        radius: $radius;
+    }
+}
+
+@mixin box($radius: 6px, $border: 1px solid #000){
+    @include rounded($radius);
+    border: $border;
+}
+
+@mixin apply-to-ie-6{
+    *html {
+        @content;
+    }
+}
